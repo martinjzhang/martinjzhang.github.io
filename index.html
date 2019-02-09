@@ -71,6 +71,9 @@ I plan to finish my PhD in summer 2019 and am currently looking for a postdoc po
 <div>
 	<b><font color="#8C1515">News:</font> </b>
 	<ul>
+		<li><p> 2019.2 I will give a talk at ITA on <a href="https://arxiv.org/abs/1902.00197">adaptive Monte Carlo multiple testing</a> that accelerates the standard workflow of permutation test + BH multiple testing by 1000x.</p></li>		
+	</ul>
+	<ul>
 		<li><p> 2018.12 Our <a href="https://www.biorxiv.org/content/early/2018/12/13/496372">AdaFDR</a> paper on covariate-adaptive multiple testing got accepted by RECOMB 2019 as top 5% best paper!</p></li>		
 	</ul>
 </div>
@@ -104,6 +107,21 @@ I plan to finish my PhD in summer 2019 and am currently looking for a postdoc po
 
 <h3>Selected projects</h3>
 <a name="project"></a>
+
+<h4>Adaptive Monte Carlo computation</h4>
+ <p> Many computational problems can be reformulated as statistical problems with uniform sampling, where adaptive sampling may significantly improve the computational efficiency. The adaptive sampling procedure can usually be designed via multi-armed bandits. </p>
+<div class="media">
+    <span class="pull-left"><img src="./assets/img/meddit.png" width="240px" height="240px"/></span>
+    <div class="media-body">
+	<p><b>Adaptive Monte Carlo Multiple Testing via Multi-Armed Bandits</b> <br> submitted to <i>ICML 2019</i> (joint work with James Zou and David Tse) <a href="https://arxiv.org/abs/1902.00197">[pdf]</a> <a href="https://github.com/bagavi/Meddit">[code]</a></p>
+	<p>We consider multiple testing with Monte Carlo p-values. Here, first n MC samples are used to computed a Monte Carlo p-value for each null hypothesis and then the Benjamini-Hochberg procedure is applied on the set of Monte Carlo p-values to control false positives. Noticing that not all p-values need to be estimated with the same accuracy and therefore with the same number of MC samples, we propose AMT (adaptive Monte Carlo multiple testing) that adaptively estimates the MC p-values and control false positives. AMT accelerates the workflow by 1000x in GWAS setting, reducing the computation time from 2 months to 1 hour.</p>
+	<br /> <br />
+	<p><b>Medoids in Almost Linear Time via Multi-armed Bandits</b> <br> <i>AISTATS 2018</i> (joint work with Vivek Bagaria<sup>*</sup>, Govinda Kamath<sup>*</sup>, Vasilis Ntranos<sup>*</sup> and David Tse) <a href="https://github.com/bagavi/Meddit">[code]</a></p>
+        <p> Computing the medoid of a large number of points in high-dimensional space is an increasingly common operation in many data science problems. We present an algorithm Med-dit to compute the medoid with high probability, which uses O(nlogn) distance evaluations. Med-dit is based on a connection with the Multi-Armed Bandit problem. We evaluate the performance of Med-dit empirically on the Netflix-prize and single-cell RNA-seq datasets, containing hundreds of thousands of points living in tens of thousands of dimensions, and observe a 5-10x improvement in performance over the current state of the art. </p>
+    </div>
+</div>
+
+
 <h4>Covariate-adaptive multiple testing</h4>
 <div class="media">
     <span class="pull-left"><img src="./assets/img/adafdr.png" width="560px" height="400px"/></span>
@@ -126,14 +144,6 @@ I plan to finish my PhD in summer 2019 and am currently looking for a postdoc po
     </div>
 </div>
 
-<h4>Adaptive Monte Carlo computation</h4>
-<div class="media">
-    <span class="pull-left"><img src="./assets/img/meddit.png" width="240px" height="240px"/></span>
-    <div class="media-body">
-	<p><b>Medoids in Almost Linear Time via Multi-armed Bandits</b> <br> <i>AISTATS 2018</i> (joint work with Vivek Bagaria<sup>*</sup>, Govinda Kamath<sup>*</sup>, Vasilis Ntranos<sup>*</sup> and David Tse) <a href="https://github.com/bagavi/Meddit">[code]</a></p>
-        <p> Many computational problems can be reformulated as statistical problems with uniform sampling, where adaptive sampling may help significantly improve the computational efficiency. For example, computing the medoid of a large number of points in high-dimensional space is an increasingly common operation in many data science problems. We present an algorithm Med-dit to compute the medoid with high probability, which uses O(nlogn) distance evaluations. Med-dit is based on a connection with the Multi-Armed Bandit problem. We evaluate the performance of Med-dit empirically on the Netflix-prize and single-cell RNA-seq datasets, containing hundreds of thousands of points living in tens of thousands of dimensions, and observe a 5-10x improvement in performance over the current state of the art. </p>
-    </div>
-</div>
 		
 		
 <h3>Publications and Manuscripts</h3>
