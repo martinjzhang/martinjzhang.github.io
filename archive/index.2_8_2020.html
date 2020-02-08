@@ -64,10 +64,10 @@ martinjzhang at gmail.com
 </h5>
 
 <p>
-	Hello! I am Martin, a postdoc at Harvard School of Public Health working with Prof. <a href="https://www.hsph.harvard.edu/alkes-price/">Alkes Price</a> on statistical genetics. Currently, I am interested in analyzing the UK biobank whole exome sequencing (WES) data, and potential methods for combining GWAS with single-cell RNA-seq. Before that, I did my PhD at Stanford with Prof. <a href="http://web.stanford.edu/~dntse/">David Tse</a> and Prof. <a href="https://sites.google.com/site/jamesyzou/">James Zou</a> on statistics, machine learning, and computational biology. Some topics I worked on during my PhD include empirical Bayes, multiple hypothesis testing, multi-armed bandits, and single-cell RNA-seq. 
+	Hello! I am Martin, a postdoc at Harvard School of Public Health working with Prof. <a href="https://www.hsph.harvard.edu/alkes-price/">Alkes Price</a> on statistical genetics. Currently, I am interested in analyzing the UK biobank whole exome sequencing (WES) data, and potential methods for combining GWAS with single-cell RNA-seq. Before that, I did my PhD at Stanford with Prof. <a href="http://web.stanford.edu/~dntse/">David Tse</a> and Prof. <a href="https://sites.google.com/site/jamesyzou/">James Zou</a> on statistics, machine learning, and computational biology. Some topics include empirical Bayes, multiple hypothesis testing, multi-armed bandits, single-cell RNA-seq. 
 <p>
 <p>
-	I publish under <b>Martin Jinye Zhang</b>. I also go under Jinye Zhang (张金野).
+	I publish under <b>Martin Jinye Zhang</b> (and its variations). I also go under Jinye Zhang (张金野).
 <p>
 
 
@@ -155,15 +155,53 @@ martinjzhang at gmail.com
         <p>Bachelor of Engineering (B.Eng.)</p>
     </div>
 </div>
-		
-		
-<h3>Papers</h3>
-<a name="papers"></a>
-(*Equal contribution)<br\>
 
-<p>
-<b>Manuscripts under review</b>
+
+<!--
+<h3>Selected projects</h3>
+<a name="project"></a>
+
+<h4>Adaptive Monte Carlo computation</h4>
+ <p> Many computational problems can be reformulated as statistical problems with uniform sampling, where adaptive sampling may significantly improve the computational efficiency. The adaptive sampling procedure can usually be designed via multi-armed bandits. </p>
+<div class="media">
+    <span class="pull-left"><img src="./assets/img/meddit.png" width="240px" height="240px"/></span>
+    <div class="media-body">
+
+	<p><b>Adaptive Monte Carlo Multiple Testing via Multi-Armed Bandits</b> <br> <i>ICML 2019</i> (joint work with James Zou and David Tse) <a href="https://arxiv.org/abs/1902.00197">[pdf]</a> <a href="https://github.com/bagavi/Meddit">[code]</a></p>
+	<p>We consider multiple testing with Monte Carlo p-values. Here, first n MC samples are used to computed a Monte Carlo p-value for each null hypothesis and then the Benjamini-Hochberg procedure is applied on the set of Monte Carlo p-values to control false positives. Noticing that not all p-values need to be estimated with the same accuracy and therefore with the same number of MC samples, we propose AMT (adaptive Monte Carlo multiple testing) that adaptively estimates the MC p-values and control false positives. AMT accelerates the workflow by 1000x in GWAS setting, reducing the computation time from 2 months to 1 hour.</p>
+
+	<p><b>Medoids in Almost Linear Time via Multi-armed Bandits</b> <br> <i>AISTATS 2018</i> (joint work with Vivek Bagaria<sup>*</sup>, Govinda Kamath<sup>*</sup>, Vasilis Ntranos<sup>*</sup> and David Tse) <a href="https://github.com/bagavi/Meddit">[code]</a></p>
+        <p> Computing the medoid of a large number of points in high-dimensional space is an increasingly common operation in many data science problems. We present an algorithm Med-dit to compute the medoid with high probability, which uses O(nlogn) distance evaluations. Med-dit is based on a connection with the Multi-Armed Bandit problem. We evaluate the performance of Med-dit empirically on the Netflix-prize and single-cell RNA-seq datasets, containing hundreds of thousands of points living in tens of thousands of dimensions, and observe a 5-10x improvement in performance over the current state of the art. </p>
+    </div>
+</div>
+
+
+<h4>Covariate-adaptive multiple testing</h4>
+<div class="media">
+    <span class="pull-left"><img src="./assets/img/adafdr.png" width="560px" height="400px"/></span>
+    <div class="media-body">
+	<p><b>AdaFDR: a Fast, Powerful and Covariate-Adaptive Approach to Multiple Hypothesis Testing</b> <br>accepted as  Cell Systems best paper in <i>RECOMB 2019</i>, received <b style="color: rgb(204,0,0);"> RECOMB Best Paper Award</b>, published in <i>Nature Communications</i>, 2018 (joint work with Fei Xia and James Zou) <a href="https://www.biorxiv.org/content/early/2018/12/13/496372">[pdf]</a> <a href="https://github.com/martinjzhang/adafdr">[software]</a> <a href="https://github.com/martinjzhang/AdaFDRpaper">[code to reproduce the paper]</a></p> 
+	<p><b>NeuralFDR: learning decision threshold from hypothesis features</b> <br><i>NeurIPS 2017</i> (joint work with Fei Xia<sup>*</sup>, James Zou, David Tse) <a href="https://github.com/fxia22/NeuralFDR">[code]</a></p>
+        <p> </p>
+    </div>
+</div>
+
+<p> Many studies in computational biology have a relatively small sample size and thus have limited detection power. This can be addressed by utilizing knowledge from previous studies. Such idea is explored here in the context of multiple hypothesis testing, whose goal is to maximize the number of discoveries while controlling the fraction of false discoveries. In many settings, in addition to the p-value, additional information/covariates for each hypothesis are available. For example, in eQTL studies, each hypothesis tests the correlation between a variant and the expression of a gene. We also have additional covariates such as the location, conservation and chromatin status of the variant, which could inform how likely the association is to be due to noise. However, popular multiple hypothesis testing approaches, such as Benjamini-Hochberg procedure (BH) and independent hypothesis weighting (IHW), either ignore these covariates or assume the covariate to be univariate. We develop covariate-adaptive multiple testing methods that adaptively learns the optimal p-value threshold from covariates to significantly improve detection power. 
 </p>
+
+<h4>Experimental design for single-cell RNA-seq</h4>
+<div class="media">
+    <span class="pull-left"><img src="./assets/img/oneread.png" width="240px" height="240px"/></span>
+    <div class="media-body">
+	<p><b>One read per cell per gene is optimal for single-cell RNA-seq</b> <br>under review in <i>Nature Communications</i>, 2018 (joint work with Vasilis Ntranos<sup>*</sup> and David Tse) <a href="https://www.biorxiv.org/content/early/2018/08/09/389296">[pdf]</a> <a href="https://github.com/martinjzhang/single_cell_eb">[code]</a></p>
+        <p>An underlying question for virtually all single-cell RNA sequencing experiments is how to allocate the limited sequencing budget: deep sequencing of a few cells or shallow sequencing of many cells? A mathematical framework reveals that, for estimating many important gene properties, the optimal allocation is to sequence at the depth of one read per cell per gene. Interestingly, our analysis shows that the corresponding optimal estimator is not the widely-used plug-in estimator but one developed via empirical Bayes. </p>
+    </div>
+</div>
+-->
+		
+		
+<h3>Manuscripts</h3>
+<a name="manuscripts"></a>
 <ul>
     <li><p><font color="#0f5ddb"> Mouse Aging Cell Atlas Analysis Reveals Global and Cell Type Specific Aging Signatures. </font> 
 	<a href="https://www.biorxiv.org/content/10.1101/2019.12.23.887604v1">[pdf]</a> <a href="https://github.com/czbiohub/tabula-muris-senis/tree/master/2_aging_signature">[code]</a> <br>
@@ -179,15 +217,13 @@ martinjzhang at gmail.com
 	<i> Under review in <font color="#0000ff"> Nature </font>(2019).</I> Contributed to differential expression analysis (Fig. 2f,g,i,j,l,m) and cluster diversity score (Fig. 4 c-f).
 	</p></li> 
 </ul>
+(*Equal contribution)
 
-<br> 
-<p>
-<b>Published papers</b>
-</p>
-
+<h3>Publications</h3>
+<a name="publications"></a>
 <ul>
     <li><p><font color="#0f5ddb"> Adaptive Monte Carlo Multiple Testing via Multi-Armed Bandits. </font> 
-	<a href="https://github.com/martinjzhang/AMT">[code]</a> <br>
+	<a href="https://arxiv.org/abs/1902.00197">[pdf]</a> <a href="https://github.com/martinjzhang/AMT">[code]</a> <br>
 	<b>Martin J. Zhang</b>, James Zou, David Tse.<br>
 	<i > <font color="#0000ff"> ICML </font>(2019).</i>  
 	</p></li> 
@@ -203,7 +239,7 @@ martinjzhang at gmail.com
 
 <ul>
     <li><p><font color="#0f5ddb"> Determining sequencing depth in a single-cell RNA-seq experiment. </font> 
-	<a href="https://github.com/martinjzhang/single_cell_eb">[code]</a> <br>
+	<a href="">[pdf]</a> <a href="https://github.com/martinjzhang/single_cell_eb">[code]</a> <br>
 	<b>Martin J. Zhang<sup>*</sup></b>, Vasilis Ntranos<sup>*</sup>, David Tse.<br>
 	<i> <font color="#0000ff"> Nature Communications </font>(2019).</i> <br>
 	(Preliminary version: "One read per cell per gene is optimal for single-cell RNA-seq". <a href="https://www.biorxiv.org/content/early/2018/08/09/389296">[pdf])</a> <br>
@@ -256,20 +292,7 @@ martinjzhang at gmail.com
 	</p></li> 
 </ul>
 
-<br> 
-<p>
-<b>Technical reports</b>
-</p>
-
-<ul>
-    <li><p><font color="#0f5ddb"> Minimax Optimality of Sign Test for Paired Heterogeneous Data. </font> 
-	<a href="https://arxiv.org/abs/1801.04005">[pdf]</a><br>
-	<b>Martin J. Zhang</b>, Meisam Razaviyayn, and David Tse.<br>
-	<i> <font color="#0000ff"> arxiv </font>(2018).</I>
-	</p></li> 
-</ul>
-
-
+(*Equal contribution)
 
 <h3>Softwares</h3>
 <a name="softwares"></a>
@@ -296,9 +319,9 @@ martinjzhang at gmail.com
 <h3>Professional services</h3>
 <a name="professional services"></a>
 <ul>
-<li> Reviewer for journals <font color="#0000ff"> Nature Communications</font>, <font color="#0000ff"> Bioinformatics</font>, <font color="#0000ff"> Journal of Genetics and Genomics</font> and conferences <font color="#0000ff"> ICML 2020</font>, <font color="#0000ff"> NeurIPS 2019</font>, <font color="#0000ff"> NeurIPS 2016</font>.
-</li>
-<li> Organizer of the <a href="http://isl.stanford.edu/colloquium.html">Information Systems Laboratory Colloquium</a>, 2015-2019, EE, Stanford. </li>
+<li> Journal paper reviewer for <font color="#0000ff"> Nature Communications </font>, <font color="#0000ff"> Bioinformatics </font>, <font color="#0000ff"> Journal of Genetics and Genomics </font></li>
+<li> Conference paper reviewer for <font color="#0000ff"> NeurIPS 2019 </font>, <font color="#0000ff"> NeurIPS 2016 </font></li>
+<li> Organizer for the <a href="http://isl.stanford.edu/colloquium.html">Information Systems Laboratory Colloquium</a>, 2015-2019, EE, Stanford. </li>
 </ul>
 
 <h3>Honors and Awards</h3>
@@ -374,7 +397,7 @@ martinjzhang at gmail.com
     <div class="container">
       <div class="row">
         <div class="span12">
-          <p>&copy; Martin Jinye Zhang 2018-2020 
+          <p>&copy; Martin J. Zhang 2018-2020 
 	     <a class="pull-right" href="#"><script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=150&t=n&d=GB91RaxcjbQAH78D8ZqC4CrkB4id3lS6DT4kESYsRTU'></script></a>
 		  </p>
         </div>
